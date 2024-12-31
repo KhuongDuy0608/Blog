@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port</title>
+    <link rel="stylesheet" href="/css/post.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="post.html">Post</a>
+        </nav>
+    </header>
+    <div id="intro">
+        <h1>SPRING FRAMEWORK</h1>
+    </div>
+    <main>
+        <p id="intro_post">Spring Framework là một nền tảng mã nguồn mở mạnh mẽ giúp phát triển các ứng dụng Java doanh nghiệp. Nó cung cấp các công cụ để 
+            quản lý đối tượng, xử lý giao tiếp cơ sở dữ liệu, và xây dựng ứng dụng web. Với tính mô-đun và linh hoạt, Spring giúp giảm sự phức tạp 
+            trong phát triển phần mềm, cải thiện khả năng mở rộng và bảo trì ứng dụng.
+        </p>
+        <h2>1. Giới thiệu về Spring Framework</h2>
+        <p>Spring Framework là một nền tảng mạnh mẽ và linh hoạt dành cho phát triển ứng dụng Java. Nó cung cấp các công cụ và tính năng để xây dựng các ứng dụng web, ứng dụng doanh nghiệp và dịch vụ API hiệu quả.</p>
+
+        <h2>2. Dependency Injection (DI)</h2>
+        <p>Dependency Injection (DI) là một trong những đặc trưng chính của Spring, giúp quản lý sự phụ thuộc giữa các đối tượng một cách dễ dàng và hiệu quả.</p>
+        <pre><code>// Ví dụ: Sử dụng @Autowired để tiêm đối tượng
+@Service
+public class UserService {
+    @Autowired
+    private UserRepository userRepository;
+
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+}</code></pre>
+
+        <h2>3. Spring MVC</h2>
+        <p>Spring MVC cung cấp mô hình thiết kế Model-View-Controller để xây dựng các ứng dụng web dễ bảo trì và mở rộng.</p>
+        <pre><code>// Ví dụ: Controller trong Spring MVC
+@Controller
+@RequestMapping("/users")
+public class UserController {
+    @GetMapping
+    public String getAllUsers(Model model) {
+        model.addAttribute("users", userService.getAllUsers());
+        return "user-list";
+    }
+}</code></pre>
+
+        <h2>4. Quản lý cơ sở dữ liệu với Spring Data JPA</h2>
+        <p>Spring Data JPA giúp làm việc với cơ sở dữ liệu dễ dàng hơn thông qua việc sử dụng các Repository.</p>
+        <pre><code>// Ví dụ: Repository trong Spring Data JPA
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
+    List<User> findByName(String name);
+}</code></pre>
+
+        <h2>5. Bảo mật với Spring Security</h2>
+        <p>Spring Security cung cấp các tính năng bảo mật mạnh mẽ như xác thực, phân quyền, và bảo vệ chống tấn công CSRF.</p>
+        <pre><code>// Ví dụ: Cấu hình bảo mật
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+            .authorizeRequests()
+                .antMatchers("/admin/**").hasRole("ADMIN")
+                .anyRequest().authenticated()
+            .and()
+            .formLogin()
+                .loginPage("/login")
+                .permitAll();
+    }
+}</code></pre>
+
+        <h2>Kết luận</h2>
+        <p>Spring Framework là một lựa chọn tuyệt vời để phát triển các ứng dụng Java mạnh mẽ, linh hoạt và dễ bảo trì. Với các tính năng phong phú, Spring giúp các nhà phát triển tiết kiệm thời gian và công sức khi xây dựng phần mềm.</p>
+    </main>
+    <footer>
+        <p>Email: khuongduy0608@gmail.com</p>
+        <p>&copy; 2024 Khương Duy - Blog cá nhân.</p>
+    </footer>
+</body>
+</html>

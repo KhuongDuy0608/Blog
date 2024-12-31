@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port</title>
+    <link rel="stylesheet" href="/css/post.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="post.html">Post</a>
+        </nav>
+    </header>
+    <div id="intro">
+        <h1>HƯỚNG ĐỐI TƯỢNG TRONG JAVA</h1>
+    </div>
+    <main>
+        <P id="intro_post">Hướng đối tượng (Object-Oriented Programming - OOP) là một trong những phương pháp lập trình phổ biến 
+            nhất hiện nay, đặc biệt trong phát triển phần mềm. Java, với tính chất 
+            hướng đối tượng mạnh mẽ, cung cấp một nền tảng tuyệt vời để xây dựng các ứng dụng phức tạp và dễ bảo trì. Bài viết này sẽ giới thiệu về các nguyên lý cơ bản của 
+            Hướng đối tượng trong Java và cách áp dụng chúng trong thực tế lập trình.</P>
+        <h2>1. Khái niệm về đối tượng và lớp (Object và Class)</h2>
+        <p>Java cho phép bạn mô phỏng các thực thể trong thế giới thực bằng cách sử dụng đối tượng (object) và lớp (class).</p>
+        <pre><code>class Car {
+    String color;
+    int speed;
+
+    void run() {
+        System.out.println("Chiếc xe đang chạy");
+    }
+
+    void stop() {
+        System.out.println("Chiếc xe đã dừng lại");
+    }
+}</code></pre>
+
+        <h2>2. Tính đóng gói (Encapsulation)</h2>
+        <p>Encapsulation giúp bảo vệ dữ liệu của đối tượng bằng cách sử dụng các phương thức getter và setter.</p>
+        <pre><code>class BankAccount {
+    private double balance;
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double amount) {
+        if (amount > 0) {
+            balance = amount;
+        }
+    }
+}</code></pre>
+
+        <h2>3. Tính kế thừa (Inheritance)</h2>
+        <p>Java cho phép bạn tái sử dụng mã nguồn bằng cách kế thừa từ các lớp cha.</p>
+        <pre><code>class Animal {
+    void eat() {
+        System.out.println("Động vật đang ăn");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Chó sủa gâu gâu");
+    }
+}</code></pre>
+
+        <h2>4. Tính đa hình (Polymorphism)</h2>
+        <p>Đa hình cho phép một hành động có thể được thực hiện theo nhiều cách khác nhau.</p>
+        <pre><code>// Method Overloading
+class MathUtil {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+// Method Overriding
+class Shape {
+    void draw() {
+        System.out.println("Vẽ một hình");
+    }
+}
+
+class Circle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Vẽ một hình tròn");
+    }
+}</code></pre>
+
+        <h2>5. Tính trừu tượng (Abstraction)</h2>
+        <p>Trừu tượng hóa giúp ẩn đi các chi tiết phức tạp và chỉ hiển thị phần quan trọng.</p>
+        <pre><code>abstract class Animal {
+    abstract void makeSound();
+}
+
+class Cat extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Meo meo");
+    }
+}</code></pre>
+
+        <h2>6. Hệ thống hỗ trợ phong phú</h2>
+        <p>Java có một hệ thống mạnh mẽ với nhiều thư viện hỗ trợ OOP như Spring, Hibernate,... Điều này giúp việc xây dựng các ứng dụng lớn trở nên dễ dàng và linh hoạt hơn.</p>
+        <h2>Kết luận</h2>
+        <p>OOP trong Java không chỉ là một kỹ thuật lập trình, mà còn là một cách tư duy logic giúp bạn giải quyết các vấn đề phức tạp. Nếu bạn mới bắt đầu học Java, hãy bắt đầu từ các khái niệm cơ bản như class, object và thử áp dụng OOP vào các bài toán thực tế. Chúc bạn học tập hiệu quả!</p>
+    </main>
+    <footer>
+        <p>Email: khuongduy0608@gmail.com</p>
+        <p>&copy; 2024 Khương Duy - Blog cá nhân.</p>
+    </footer>
+</body>
+</html>

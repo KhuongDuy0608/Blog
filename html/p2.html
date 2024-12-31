@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port</title>
+    <link rel="stylesheet" href="/css/post.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="post.html">Post</a>
+        </nav>
+    </header>
+    <div id="intro">
+        <h1>CÁC BIẾN VAR, LET, CONST TRONG JAVASCRIPT</h1>
+    </div>
+    <main>
+        <p id="intro_post">Trong JavaScript, việc quản lý và sử dụng biến là một yếu tố quan trọng để xây dựng các ứng dụng hiệu quả và dễ bảo trì. 
+            Trước đây, var là cách duy nhất để khai báo biến, nhưng từ khi ES6 ra đời, hai từ khóa mới là let và 
+            const đã được bổ sung để giúp lập trình viên dễ dàng kiểm soát phạm vi (scope) và tính chất không thay đổi 
+            của các biến trong chương trình. Mỗi loại biến này có đặc điểm và ứng dụng riêng, điều này ảnh hưởng trực tiếp 
+            đến cách thức chúng ta viết mã và xử lý các vấn đề liên quan đến phạm vi và khả năng thay đổi giá trị.
+            Bài viết này sẽ phân tích sự khác biệt giữa var, let, và const, và giải thích khi nào nên sử dụng mỗi loại trong các tình huống khác nhau.
+        </p>
+        <h2>1. Khai báo biến với <code>var</code>, <code>let</code>, và <code>const</code></h2>
+        <p>JavaScript cung cấp ba cách khai báo biến: <code>var</code>, <code>let</code>, và <code>const</code>. Mỗi cách có đặc điểm và phạm vi hoạt động khác nhau.</p>
+        <pre><code>// Sử dụng var
+var x = 10;
+console.log(x); // 10
+
+// Sử dụng let
+let y = 20;
+console.log(y); // 20
+
+// Sử dụng const
+const z = 30;
+console.log(z); // 30</code></pre>
+
+        <h2>2. Tính chất Hoisting</h2>
+        <p>Biến được khai báo bằng <code>var</code> sẽ được "hoisted" (nâng lên đầu phạm vi) nhưng không khởi tạo giá trị. Với <code>let</code> và <code>const</code>, biến cũng được hoisted nhưng không thể sử dụng trước khi khai báo.</p>
+        <pre><code>console.log(a); // undefined
+var a = 10;
+
+// console.log(b); // Lỗi: Cannot access 'b' before initialization
+let b = 20;</code></pre>
+
+        <h2>3. Phạm vi biến (Scope)</h2>
+        <p>Phạm vi của biến phụ thuộc vào cách khai báo:</p>
+            <p><code>var</code>: phạm vi toàn cục hoặc hàm.</p>
+            <p><code>let</code> và <code>const</code>: phạm vi khối (block scope).</p>
+        <pre><code>if (true) {
+    var globalVar = "Toàn cục";
+    let blockVar = "Khối";
+    const blockConst = "Khối";
+}
+
+console.log(globalVar); // "Toàn cục"
+// console.log(blockVar); // Lỗi: blockVar không được định nghĩa
+// console.log(blockConst); // Lỗi: blockConst không được định nghĩa</code></pre>
+
+        <h2>4. Biến trong Template Literals</h2>
+        <p>JavaScript hỗ trợ sử dụng biến trong chuỗi thông qua Template Literals, giúp code ngắn gọn và dễ đọc hơn.</p>
+        <pre><code>const name = "JavaScript";
+const version = 2023;
+console.log(`Ngôn ngữ: ${name}, Phiên bản: ${version}`);
+// Output: Ngôn ngữ: JavaScript, Phiên bản: 2023</code></pre>
+
+        <h2>5. Biến động (Dynamic Typing)</h2>
+        <p>JavaScript là ngôn ngữ "dynamic typing", nghĩa là một biến có thể thay đổi kiểu dữ liệu trong suốt quá trình chạy.</p>
+        <pre><code>let dynamicVar = 100; // kiểu số
+console.log(typeof dynamicVar); // "number"
+
+dynamicVar = "Hello"; // kiểu chuỗi
+console.log(typeof dynamicVar); // "string"</code></pre>
+
+        <h2>Kết luận</h2>
+        <p>Biến trong JavaScript rất linh hoạt và mạnh mẽ, nhưng cũng cần sử dụng đúng cách để tránh lỗi. Hãy làm quen với <code>let</code> và <code>const</code>, bởi chúng an toàn hơn so với <code>var</code> trong hầu hết các trường hợp. Chúc bạn học JavaScript vui vẻ và hiệu quả!</p>
+    </main>
+    <footer>
+        <p>Email: khuongduy0608@gmail.com</p>
+        <p>&copy; 2024 Khương Duy - Blog cá nhân.</p>
+    </footer>
+</body>
+</html>

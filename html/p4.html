@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port</title>
+    <link rel="stylesheet" href="/css/post.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="post.html">Post</a>
+        </nav>
+    </header>
+    <div id="intro">
+        <h1>TẠO HIỆU ỨNG ĐỘNG VỚI JAVASCRIPT</h1>
+    </div>
+    <main>
+        <p id="intro_post">JavaScript không chỉ là công cụ để xử lý logic phía máy chủ, mà còn giúp tạo ra những hiệu ứng trực quan và tương tác hấp dẫn trên trang web. 
+            Một trong những hiệu ứng đơn giản nhưng hiệu quả nhất là hiệu ứng hover, giúp thay đổi giao diện khi người dùng di chuột qua các 
+            phần tử. Bằng cách kết hợp JavaScript với CSS, bạn có thể tạo ra các hiệu ứng hover như thay đổi màu sắc, phóng to hình ảnh 
+            hoặc thêm các chuyển động mượt mà. Bên cạnh đó, việc cuộn trang lên đầu cũng là một tính năng rất hữu ích, đặc biệt đối với 
+            các trang dài. Bài viết này sẽ hướng dẫn bạn cách sử dụng JavaScript để tạo hiệu ứng hover và thêm tính năng cuộn lên đầu trang, giúp trang web của bạn trở nên sinh động và thân thiện với người dùng hơn.</p>
+            <h2>Tạo hiệu ứng động với JavaScript</h2>
+            <p>Bạn có thể sử dụng JavaScript để tạo ra các hiệu ứng thú vị trên website của mình, chẳng hạn như hiệu ứng hover động hoặc cuộn mượt. Dưới đây là một ví dụ:</p>
+    
+            <h3>Hiệu ứng hover</h3>
+            <p>Thêm hiệu ứng hover động cho các liên kết hoặc nút bấm:</p>
+            <pre><code>&lt;a href="#" class="hover-effect">Hover me!&lt;/a&gt;</code></pre>
+            <p>Khi di chuột qua, bạn sẽ thấy hiệu ứng phóng to và đổi màu.</p>
+            <p>Ví dụ thực tế:</p>
+            <a href="#" class="hover-effect">Hover me!</a>
+            <p>Thêm một số CSS để hỗ trợ hiệu ứng:</p>
+            <pre><code>
+            &lt;style>
+                .hover-effect {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color: lightblue;
+                    color: black;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    transition: all 0.3s ease-in-out;
+                }
+                .hover-effect:hover {
+                    background-color: blue;
+                    color: white;
+                    transform: scale(1.1);
+                }
+        
+                #scroll-to-top {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    display: none;
+                    padding: 10px;
+                    background-color: black;
+                    color: white;
+                    border: none;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    font-size: 20px;
+                }
+            &lt;/style&gt;</code></pre>
+            <h3>Cuộn mượt đến đầu trang</h3>
+            <p>Thêm nút "Lên đầu trang" với hiệu ứng cuộn mượt:</p>
+            <pre><code>&lt;button id="scroll-to-top">&uarr;&lt;/button&gt;</code></pre>
+    
+            <p>Và đây là JavaScript để xử lý hiệu ứng cuộn:</p>
+            <pre><code>// Hiển thị nút khi cuộn xuống
+    window.addEventListener('scroll', () => {
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+        if (window.scrollY > 200) {
+            scrollToTopButton.style.display = 'block';
+        } else {
+            scrollToTopButton.style.display = 'none';
+        }
+    });
+    
+    // Cuộn mượt khi bấm nút
+    document.getElementById('scroll-to-top').addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });</code></pre>
+    
+            <h3>Kết quả</h3>
+            <p>Sau khi thêm đoạn mã trên, trang web của bạn sẽ có thêm hiệu ứng hover và nút "Lên đầu trang" mượt mà!</p>
+    </main>
+    <button id="scroll-to-top">&uarr;</button>
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollToTopButton = document.getElementById('scroll-to-top');
+            if (window.scrollY > 200) {
+                scrollToTopButton.style.display = 'block';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+
+        document.getElementById('scroll-to-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+<footer>
+    <p>Email: khuongduy0608@gmail.com</p>
+    <p>&copy; 2024 Khương Duy - Blog cá nhân.</p>
+</footer>
+
+    <button id="scroll-to-top">&uarr;</button>
+    <script>
+        // Hiển thị nút khi cuộn xuống
+        window.addEventListener('scroll', () => {
+            const scrollToTopButton = document.getElementById('scroll-to-top');
+            if (window.scrollY > 200) {
+                scrollToTopButton.style.display = 'block';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+
+        // Cuộn mượt khi bấm nút
+        document.getElementById('scroll-to-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

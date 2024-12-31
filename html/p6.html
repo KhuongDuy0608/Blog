@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port</title>
+    <link rel="stylesheet" href="/css/post.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="post.html">Post</a>
+        </nav>
+    </header>
+    <div id="intro">
+        <h1>SỬ DỤNG JAVASCRIPT ĐỂ XỬ LÝ CÁC LOGIC TRÊN WEBSITE</h1>
+    </div>
+    <main>
+        <p id="intro_post">JavaScript là ngôn ngữ chủ đạo giúp xử lý logic phía client trên các trang web. Với JavaScript, 
+            bạn có thể xử lý sự kiện người dùng, kiểm tra và xác thực dữ liệu, thay đổi nội dung trang mà không cần tải lại, 
+            à tạo các hiệu ứng động, từ đó nâng cao trải nghiệm người dùng. Nhờ vào tính linh hoạt và khả năng tương tác với 
+            các thành phần HTML và CSS, JavaScript giúp xây dựng các ứng dụng web động và phản hồi nhanh chóng.
+        </p>
+        <h2>1. Vai trò của JavaScript trong trình duyệt</h2>
+        <p>JavaScript đóng vai trò trung tâm trong việc tạo ra các trang web động, giúp người dùng có trải nghiệm tốt hơn khi tương tác với website.</p>
+
+        <h2>2. Thao tác DOM</h2>
+        <p>Document Object Model (DOM) cho phép JavaScript truy cập và thay đổi nội dung, cấu trúc của trang web.</p>
+        <pre><code>// Ví dụ: Thay đổi nội dung của một phần tử HTML
+const element = document.getElementById("demo");
+element.textContent = "Nội dung mới";</code></pre>
+
+        <h2>3. Quản lý sự kiện</h2>
+        <p>JavaScript cho phép bạn lắng nghe và xử lý các sự kiện như click, nhập dữ liệu, hoặc cuộn chuột.</p>
+        <pre><code>// Ví dụ: Thêm sự kiện click vào nút
+const button = document.getElementById("myButton");
+button.addEventListener("click", () => {
+    alert("Bạn đã nhấn nút!");
+});</code></pre>
+        <h2>4. Tích hợp API</h2>
+        <p>JavaScript hỗ trợ gọi API để lấy dữ liệu hoặc gửi thông tin lên máy chủ, giúp trang web trở nên linh hoạt hơn.</p>
+        <pre><code>// Ví dụ: Gọi API để lấy dữ liệu JSON
+fetch("https://api.example.com/data")
+    .then(response => response.json())
+    .then(data => console.log(data));</code></pre>
+
+        <h2>5. Local Storage</h2>
+        <p>JavaScript cung cấp khả năng lưu trữ dữ liệu trên trình duyệt thông qua <code>localStorage</code> hoặc <code>sessionStorage</code>.</p>
+        <pre><code>// Ví dụ: Lưu và lấy dữ liệu từ localStorage
+localStorage.setItem("username", "JohnDoe");
+const username = localStorage.getItem("username");
+console.log(username);</code></pre>
+
+        <h2>Kết luận</h2>
+        <p>JavaScript trong trình duyệt giúp biến các trang web tĩnh thành những ứng dụng web mạnh mẽ và tương tác, làm tăng đáng kể trải nghiệm người dùng.</p>
+    </main>
+    <footer>
+        <p>Email: khuongduy0608@gmail.com</p>
+        <p>&copy; 2024 Khương Duy - Blog cá nhân.</p>
+    </footer>
+</body>
+</html>

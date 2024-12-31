@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port</title>
+    <link rel="stylesheet" href="/css/post.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="post.html">Post</a>
+        </nav>
+    </header>
+    <div id="intro">
+        <h1>CÁC THƯ VIỆN HỖ TRỢ TRONG JAVA</h1>
+    </div>
+    <main>
+        <p id="intro_post">Thư viện trong Java là tập hợp các lớp và công cụ có sẵn giúp lập trình viên giải quyết các vấn đề phổ biến mà 
+            không cần phải viết mã từ đầu. Các thư viện này cung cấp các chức năng như xử lý chuỗi, làm việc với tệp, kết nối 
+            mạng và nhiều tính năng khác, giúp tiết kiệm thời gian phát triển và nâng cao hiệu quả lập trình. Việc sử dụng thư viện 
+            Java cho phép lập trình viên tập trung vào giải quyết các vấn đề cụ thể của ứng dụng thay vì phải xây dựng lại các chức năng cơ bản.</p>
+        <h2>1. Giới thiệu</h2>
+        <p>Java không chỉ nổi tiếng là một ngôn ngữ lập trình mạnh mẽ mà còn bởi hệ sinh thái phong phú các thư viện và framework. Những thư viện này giúp lập trình viên xây dựng ứng dụng nhanh chóng và hiệu quả hơn.</p>
+
+        <h2>2. Java Collections Framework</h2>
+        <p><strong>Java Collections Framework (JCF)</strong> là một phần của thư viện chuẩn Java, cung cấp các cấu trúc dữ liệu như <code>List</code>, <code>Set</code>, <code>Map</code>, giúp quản lý dữ liệu dễ dàng hơn.</p>
+        <pre><code>// Ví dụ: Sử dụng ArrayList trong Java
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Java");
+        list.add("Python");
+        System.out.println(list);
+    }
+}</code></pre>
+
+        <h2>3. Thư viện Apache Commons</h2>
+        <p><strong>Apache Commons</strong> là tập hợp các thư viện tiện ích, hỗ trợ xử lý chuỗi, số, tập tin, và nhiều hơn nữa.</p>
+        <pre><code>// Ví dụ: Sử dụng StringUtils từ Apache Commons
+import org.apache.commons.lang3.StringUtils;
+
+public class Main {
+    public static void main(String[] args) {
+        String reversed = StringUtils.reverse("Hello World");
+        System.out.println(reversed);
+    }
+}</code></pre>
+
+        <h2>4. Spring Framework</h2>
+        <p><strong>Spring</strong> là một framework mạnh mẽ dành cho ứng dụng Java, hỗ trợ lập trình viên xây dựng các ứng dụng web, microservices, và quản lý dependency.</p>
+        <pre><code>// Ví dụ: Một ứng dụng REST đơn giản với Spring Boot
+@RestController
+public class HelloController {
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello, Spring!";
+    }
+}</code></pre>
+
+        <h2>Kết luận</h2>
+        <p>Thư viện Java cung cấp những công cụ mạnh mẽ và đa dạng để giải quyết hầu hết các bài toán lập trình. Việc sử dụng thành thạo những thư viện này sẽ giúp bạn trở thành một lập trình viên Java chuyên nghiệp.</p>
+    </main>
+    <footer>
+        <p>Email: khuongduy0608@gmail.com</p>
+        <p>&copy; 2024 Khương Duy - Blog cá nhân.</p>
+    </footer>
+</body>
+</html>

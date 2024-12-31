@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port</title>
+    <link rel="stylesheet" href="/css/post.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="post.html">Post</a>
+        </nav>
+    </header>
+    <div id="intro">
+        <h1>NHỮNG LỖI THƯỜNG GẶP KHI HỌC JAVASCRIPT</h1>
+    </div>
+    <main>
+        <article>
+            <p id="intro_post">Khi mới bắt đầu học JavaScript, người học thường gặp phải một số lỗi cơ bản. Một trong những lỗi phổ biến là nhầm lẫn giữa var, 
+                let và const, dẫn đến vấn đề phạm vi và giá trị không mong muốn. Lỗi thứ hai là liên quan đến this, khi giá trị của nó thay đổi 
+                tùy vào cách hàm được gọi. Ngoài ra, quên xử lý lỗi khi làm việc với bất đồng bộ như Promise hoặc async/await cũng rất hay xảy ra, 
+                khiến ứng dụng không ổn định. Cuối cùng, việc quên thêm dấu chấm phẩy có thể gây ra lỗi không mong muốn, dù JavaScript có tính 
+                năng tự động thêm dấu chấm phẩy. Việc nhận diện và khắc phục những lỗi này sẽ giúp người học JavaScript tiến bộ nhanh chóng.
+            </p>
+            <h2>Những lỗi thường gặp khi mới học JavaScript</h2>
+            <p>Khi mới bắt đầu học JavaScript, việc mắc lỗi là không thể tránh khỏi. Dưới đây là những lỗi phổ biến mà người học thường gặp và cách khắc phục.</p>
+
+            <h3>1. Nhầm lẫn giữa <code>var</code>, <code>let</code> và <code>const</code></h3>
+            <p><strong>Vấn đề:</strong> Sử dụng sai loại khai báo biến có thể dẫn đến lỗi về phạm vi hoặc giá trị không mong muốn.</p>
+            <pre><code>// Sai phạm vi của biến
+a = 10; // Không khai báo biến, phạm vi sẽ là toàn cục
+console.log(a);</code></pre>
+            <p><strong>Cách khắc phục:</strong> Luôn sử dụng <code>let</code> hoặc <code>const</code> thay vì <code>var</code>, và đảm bảo khai báo biến trước khi sử dụng.</p>
+
+            <h3>2. Lỗi liên quan đến <code>this</code></h3>
+            <p><strong>Vấn đề:</strong> Trong JavaScript, giá trị của <code>this</code> thay đổi tùy thuộc vào cách hàm được gọi.</p>
+            <pre><code>// Lỗi về ngữ cảnh của this
+const obj = {
+    name: "John",
+    greet: function() {
+        console.log(this.name);
+    }
+};
+const greet = obj.greet;
+greet(); // undefined</code></pre>
+            <p><strong>Cách khắc phục:</strong> Sử dụng <code>.bind()</code>, <code>arrow function</code>, hoặc <code>self</code> để kiểm soát giá trị của <code>this</code>.</p>
+
+            <h3>3. Không xử lý lỗi bất đồng bộ</h3>
+            <p><strong>Vấn đề:</strong> Quên xử lý lỗi khi sử dụng <code>Promise</code> hoặc <code>async/await</code>.</p>
+            <pre><code>// Sai khi không xử lý lỗi
+fetch("https://api.example.com/data")
+    .then(response => response.json())
+    .then(data => console.log(data));</code></pre>
+            <p><strong>Cách khắc phục:</strong> Luôn thêm <code>.catch()</code> hoặc sử dụng <code>try-catch</code> khi dùng <code>async/await</code>.</p>
+
+            <h3>4. Quên thêm dấu chấm phẩy</h3>
+            <p><strong>Vấn đề:</strong> JavaScript có thể tự động thêm dấu chấm phẩy, nhưng trong một số trường hợp điều này gây lỗi không mong muốn.</p>
+            <pre><code>// Lỗi không mong muốn khi thiếu dấu chấm phẩy
+let a = 5
+[1, 2, 3].forEach(n => console.log(n));</code></pre>
+            <p><strong>Cách khắc phục:</strong> Luôn thêm dấu chấm phẩy ở cuối mỗi câu lệnh.</p>
+
+            <h3>Kết luận</h3>
+            <p>Việc nắm vững các lỗi phổ biến và cách khắc phục sẽ giúp bạn học JavaScript hiệu quả hơn. Hãy luôn thực hành và thử nghiệm để cải thiện kỹ năng lập trình của mình.</p>
+        </article>
+    </main>
+    <footer>
+        <p>Email: khuongduy0608@gmail.com</p>
+        <p>&copy; 2024 Khương Duy - Blog cá nhân.</p>
+    </footer>
+</body>
+</html>
